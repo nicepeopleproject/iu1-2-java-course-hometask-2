@@ -11,11 +11,25 @@ public class Prism {
 
     // метод вычисления объема
     public double volume() {
-        return 0.0;
+        return base.area()*h;
     }
 
     // площадь поверхности
     public double surfaceArea() {
-        return 0.0;
+        double area = 0;
+        area += 2 * base.area();
+
+
+        double[] parameters = base.getParameters();
+        if(parameters.length == 1){
+            area += h*2*Math.PI*parameters[0];
+
+        }else{
+            for(int i = 0; i<parameters.length; i++){
+                area += h*parameters[i];
+            }
+        }
+
+        return area;
     }
 }
