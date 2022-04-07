@@ -1,4 +1,4 @@
-package task1;
+package com.company;
 
 public class Prism {
     private Figure2D base;
@@ -11,11 +11,13 @@ public class Prism {
 
     // метод вычисления объема
     public double volume() {
-        return 0.0;
+        double v = base.area() * h;
+        return v;
     }
 
     // площадь поверхности
     public double surfaceArea() {
-        return 0.0;
+        double sa = base.perimetr() * h + base.area()*2;
+        return sa;
     }
 }
