@@ -1,5 +1,6 @@
 package task1;
 
-public abstract class Figure2D {
-    abstract double area();
+interface Figure2D {
+    double area();
+    double perimeter();
 }
