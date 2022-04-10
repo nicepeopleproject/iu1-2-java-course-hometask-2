@@ -11,11 +11,11 @@ public class Prism {
 
     // метод вычисления объема
     public double volume() {
-        return 0.0;
+        return base.area() * this.h;
     }
 
     // площадь поверхности
     public double surfaceArea() {
-        return 0.0;
+        return base.area() * 2 + base.perimeter() * this.h;
     }
 }
