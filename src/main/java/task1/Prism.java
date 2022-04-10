@@ -9,13 +9,22 @@ public class Prism {
         this.h = h;
     }
 
-    // метод вычисления объема
-    public double volume() {
-        return 0.0;
+    public double vol() {
+        return base.area()*h;
     }
 
-    // площадь поверхности
-    public double surfaceArea() {
-        return 0.0;
+    public double surfArea() {
+        double area = 2 * base.area();
+
+        if(base.getPar().length == 1){
+            area += h*2*Math.PI*base.getPar()[0];
+
+        }else{
+            for(int i = 0; i<base.getPar().length; i++){
+                area += h*base.getPar()[i];
+            }
+        }
+
+        return area;
     }
 }
