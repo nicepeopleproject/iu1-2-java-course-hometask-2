@@ -11,7 +11,7 @@ public class Prism {
 
     // метод вычисления объема
     public double volume() {
-        return 0.0;
+        return base.area() * h;
     }
 
     // площадь поверхности
